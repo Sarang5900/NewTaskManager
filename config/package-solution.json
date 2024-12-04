@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "new-task-manager-client-side-solution",
+    "id": "2b77b0db-78fd-4426-a0b4-113b972d3f3b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "new-task-manager description"
+      },
+      "longDescription": {
+        "default": "new-task-manager description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "new-task-manager Feature",
+        "description": "The feature that activates elements of the new-task-manager solution.",
+        "id": "4319fd7c-c26a-4892-be18-bc307b8fa2e6",
+        "version": "1.1.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/new-task-manager.sppkg"
+  }
+}

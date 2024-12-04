@@ -1,0 +1,72 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.addTask {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); 
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); 
+    }
+  }
+}
+
+.goToList {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 5px 10px;
+  border-radius: 100px;
+  background: #cfef00;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: left;
+  font-size: 15px;
+}
+
+.goToList:hover {
+  background: #c4e201;
+}
+
+.goToList svg {
+  width: 25px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.goToList:hover svg {
+  transform: translateX(5px);
+}
+
+.goToList:active {
+  transform: scale(0.95);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px 0px 0px 20px;
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "add-task-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/addTask/AddTaskWebPart.js",
+          "manifest": "./src/webparts/addTask/AddTaskWebPart.manifest.json"
+        }
+      ]
+    },
+    "edit-task-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/editTask/EditTaskWebPart.js",
+          "manifest": "./src/webparts/editTask/EditTaskWebPart.manifest.json"
+        }
+      ]
+    },
+    "task-list-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/taskList/TaskListWebPart.js",
+          "manifest": "./src/webparts/taskList/TaskListWebPart.manifest.json"
+        }
+      ]
+    },
+    "task-dashboard-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/taskDashboard/TaskDashboardWebPart.js",
+          "manifest": "./src/webparts/taskDashboard/TaskDashboardWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "AddTaskWebPartStrings": "lib/webparts/addTask/loc/{locale}.js",
+    "EditTaskWebPartStrings": "lib/webparts/editTask/loc/{locale}.js",
+    "TaskListWebPartStrings": "lib/webparts/taskList/loc/{locale}.js",
+    "TaskDashboardWebPartStrings": "lib/webparts/taskDashboard/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

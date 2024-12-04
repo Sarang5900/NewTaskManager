@@ -1,0 +1,194 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.taskList {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+
+/* Add Button (Existing Style) */
+.addButton {
+  display: flex;
+  align-items: right;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  margin: 16px 0; 
+}
+
+.addButton svg {
+  margin-right: 6px;
+}
+
+.addButton:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.addButton:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+.goToList {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 5px 10px;
+  border-radius: 100px;
+  background: #cfef00;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: left;
+  font-size: 15px;
+}
+
+.goToList:hover {
+  background: #c4e201;
+}
+
+.goToList svg {
+  width: 25px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.goToList:hover svg {
+  transform: translateX(5px);
+}
+
+.goToList:active {
+  transform: scale(0.95);
+}
+
+.container {
+  background-position: center; /* Correct property name */
+  background-size: cover; /* Correct property name */
+  width: 100%; /* Remove quotes and space */
+  height: 100vh; /* Remove quotes */
+  display: flex; /* Correct property name */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  flex-direction: row; /* Horizontal layout */
+  padding: 20px; /* Remove quotes */
+  box-sizing: border-box; /* Correct property name */
+  overflow: hidden; /* Optional: Prevent overflow */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically in column layout */
+    padding: 20px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+
+  .pageNumber {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #0078d4;
+      color: #fff;
+    }
+
+    &.active {
+      background-color: #0078d4;
+      color: #fff;
+      font-weight: bold;
+      border: 1px solid #005a9e;
+    }
+  }
+
+  .iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #f3f3f3;
+    }
+
+    &[disabled] {
+      background-color: #eaeaea;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.pageInput {
+  width: 50px; // Set a fixed width for the input
+  margin-left: 10px; // Space between pagination controls and input
+  padding: 5px; // Padding inside the input
+  border: 1px solid #ccc; // Light gray border
+  border-radius: 4px; // Rounded corners
+  font-size: 14px; // Font size
+  text-align: center; // Center the text
+  background-color: rgba(255, 255, 255, 0.8); // Slightly transparent background
+  transition: border-color 0.3s; // Smooth transition for border color
+
+  &:focus {
+    border-color: #0078d4; // Change to a blue color on focus
+    outline: none; // Remove default outline
+  }
+
+  // Optional: Change color for invalid input
+  &:invalid {
+    border-color: red; // Change to red if input is invalid
+  }
+}
+
